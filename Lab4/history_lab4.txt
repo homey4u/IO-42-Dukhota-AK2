@@ -1,0 +1,260 @@
+    1  history -w
+    2  touch lab11.sh
+    3  chmod +x lab11.sh
+    4  nano lab11.sh
+    5  ./lab11.sh
+    6  nano lab11.sh
+    7  ./lab11.sh
+    8  nano lab11.sh
+    9  ./lab11.sh
+   10  nano lab11.sh
+   11  touch lab11.sh
+   12  chmod +x lab11.sh
+   13  nano lab11.sh
+   14  ./lab11.sh
+   15  nano lab11.sh
+   16  sudo killall ping
+   17  ping -i 5 google.com > /dev/null &
+   18  sudo ping -i 5 google.com > /dev/null &
+   19  vlc &
+   20  fg
+   21  ps -eo user,pid,lstart,stat,time,cmd | grep ping
+   22  kill -TERM 5749
+   23  ps aux | grep ping
+   24  kill 5752
+   25  sudo kill -9 5752
+   26  sudo killall vlc
+   27  whoami
+   28  date
+   29  history > FINAL_history.txt
+   30  history -w
+   31  clear
+   32  neofetch
+   33  uname -a
+   34  sudo apt update
+   35  cat /etc/apt/sources.list.d/ubuntu.sources
+   36  sudo apt install vim -y
+   37  cd ~
+   38  cd Downloads
+   39  man ls
+   40  ls -la
+   41  dpkg -i htop*.deb
+   42  sudo dpkg -i htop*.deb
+   43  apt download htop
+   44  sudo dpkg -i htop*.deb
+   45  cd /
+   46  sudo su
+   47  echo "hi all"
+   48  echo "$PWD hi all here!"
+   49  sudo touch hi.sh
+   50  echo $PATH
+   51  vi hi.sh
+   52  ./hi.sh
+   53  sudo chmod a+x hi.sh
+   54  sudo chmod a+rwx hi.sh
+   55  ./hi.sh
+   56  ./hi.sh Ukraine
+   57  cd ~
+   58  mkdir scripts
+   59  cp /hi.sh scripts/
+   60  cp scripts Documents
+   61  cp -r scripts Documents
+   62  cd scripts
+   63  mv hi.sh ..
+   64  cd ..
+   65  rm scripts
+   66  rm -r scripts
+   67  cd /bin
+   68  ls -l
+   69  cd ../..
+   70  cd ~
+   71  mkdir scripts
+   72  tar -cvf scripts.tar scripts/
+   73  cat hi.sh
+   74  cat /var/log/dpkg.log
+   75  tail -n 20 /var/log/dpkg.log
+   76  less /var/log/dpkg.log
+   77  cd /
+   78  find . -name "dhcp" 2>/dev/null
+   79  find . -name "dhcp"
+   80  find . -name "*dhcp*"
+   81  find . -name "*dhcp*" | grep -i --color "dhcp"
+   82  find . -name "*dhcp*" | grep -i --color "etc"
+   83  ping -c 4 google.com
+   84  ping -c 10 google.com > ~/ping.log & date
+   85  sudo ping -c 4 google.com
+   86  vlc &
+   87  ls -l
+   88  cd /bin
+   89  ls
+   90  echo $PATH
+   91  printenv
+   92  whoami
+   93  cd /etc
+   94  ls
+   95  cd ..
+   96  cd lib
+   97  ls
+   98  dmesg
+   99  sudo dmesg
+  100  ls -l /dev
+  101  sudo dmesg -c
+  102  sudo dmesg
+  103  df -h
+  104  cd /home
+  105  ls -l
+  106  lsmod
+  107  cd /proc
+  108  cat cpuinfo
+  109  echo 1 > /proc/sys/net/ipv4/ip_forward
+  110  sudo echo 1 > /proc/sys/net/ipv4/ip_forward
+  111  sudo su
+  112  sudo cp /root/history.txt ~/root_history.txt
+  113  sudo chown $USER:$USER ~/root_history.txt
+  114  history > FINAL_history1.txt
+  115  cd ~
+  116  history > FINAL_history1.txt
+  117  touch lab1.2.sh
+  118  chmod +x lab1.2.sh
+  119  nano lab1.2.sh
+  120  ./lab1.2.sh
+  121  cat numbers.txt
+  122  Min_Num1=$(sort -n numbers.txt | head -n 1)
+  123  echo $Min_Num1
+  124  numbers.txt
+  125  > numbers.txt
+  126  cat numbers.txt
+  127  echo $Min_Num1 > numbers.txt
+  128  cat numbers.txt
+  129  nano lab1.2.sh
+  130  sudo apt update && sudo apt install -y build-essential cmake ninja-build git
+  131  mkdir lab2_calculator
+  132  cd lab2_calculator
+  133  nano calculator.h
+  134  nano calculator.cpp
+  135  nano main.cpp
+  136  ls
+  137  nano Makefile
+  138  make
+  139  ./calculator_app
+  140  make clean
+  141  nano CMakeLists.txt
+  142  mkdir build
+  143  cd build
+  144  cmake ..
+  145  make
+  146  ./calculator_app
+  147  cd ..
+  148  mkdir build_ninja
+  149  cd build_ninja
+  150  cmake -G Ninja ..
+  151  ls
+  152  ninja
+  153  ./calculator_app
+  154  cd ~/lab2_calculator
+  155  git init
+  156  mkdir ninja_scripts
+  157  cp build_ninja/build.ninja ninja_scripts/
+  158  cp build_ninja/CMakeFiles/rules.ninja ninja_scripts/
+  159  git add main.cpp calculator.cpp calculator.h Makefile CMakeLists.txt ninja_scripts/
+  160  git commit -m "Lab 2: Make, CMake, Ninja"
+  161  git remote add origin https://github.com/homey4u/IO-42-Dukhota-AK2/tree/master/Lab2
+  162  git push -u origin master
+  163  git push -u origin main
+  164  cd ~
+  165  git clone https://github.com/homey4u/IO-42-Dukhota-AK2.git
+  166  cd IO-42-Dukhota-AK2
+  167  mkdir -p Lab2
+  168  cp ~/lab2_calculator/main.cpp Lab2/
+  169  cp ~/lab2_calculator/calculator.cpp Lab2/
+  170  cp ~/lab2_calculator/calculator.h Lab2/
+  171  cp ~/lab2_calculator/Makefile Lab2/
+  172  cp ~/lab2_calculator/CMakeLists.txt Lab2/
+  173  cp -r ~/lab2_calculator/ninja_scripts Lab2/
+  174  git add Lab2/
+  175  git commit -m "Додав файли Лабораторної роботи №2 (Make, CMake, Ninja)"
+  176  git push
+  177  whoami
+  178  date
+  179  history > history_lab2.txt
+  180  history
+  181  sudo apt update && sudo apt install -y git vim tree curl ccache minicom
+  182  ccache -M 5G
+  183  sudo usermod -a -G dialout $USER
+  184  sudo usermod -a -G plugdev $USER
+  185  sudo nano /etc/udev/rules.d/51-android.rules
+  186  sudo udevadm control --reload
+  187  sudo udevadm trigger
+  188  mkdir -p ~/Downloads
+  189  cd ~/Downloads
+  190  wget https://developer.arm.com/-/media/Files/downloads/gnu-a/8.3-2019.03/binrel/gcc-arm-8.3-2019.03-x86_64-arm-eabi.tar.xz
+  191  wget https://developer.arm.com/-/media/Files/downloads/gnu-a/8.3-2019.03/binrel/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf.tar.xz
+  192  nano ~/.bashrc
+  193  source ~/.bashrc
+  194  sudo tar xJvf gcc-arm-8.3-2019.03-x86_64-arm-eabi.tar.xz -C /opt/
+  195  sudo tar xJvf gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf.tar.xz -C /opt/
+  196  nano ~/.bashrc
+  197  source ~/.bashrc
+  198  arm-linux-gnueabihf-gcc --version
+  199  history > history_lab3_prep.txt
+  200  gcc --version
+  201  sudo apt update
+  202  sudo apt install gcc-9
+  203  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 9
+  204  gcc --version
+  205  nano ~/.bashrc
+  206  source ~/.bashrc\
+  207  source ~/.bashrc
+  208  sudo apt install -y make libncurses5-dev libssl-dev bc bison flex
+  209  mkdir -p ~/repos
+  210  cd ~/repos
+  211  git clone https://gitlab.denx.de/u-boot/u-boot.git
+  212  cd u-boot
+  213  git checkout v2019.07
+  214  curl https://patchwork.ozlabs.org/series/130450/mbox/ | git am
+  215  export PATH=/opt/gcc-arm-8.3-2019.03-x86_64-arm-eabi/bin:$PATH
+  216  export CROSS_COMPILE='ccache arm-eabi-'
+  217  export ARCH=arm
+  218  make am335x_boneblack_defconfig
+  219  make -j4
+  220  ls -hl MLO u-boot.img
+  221  cd ~/repos
+  222  git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
+  223  rm -rf linux-stable
+  224  rm ~/Downloads/*.tar.xz
+  225  sudo apt autoremove -y
+  226  sudo apt clean
+  227  rm -rf ~/.local/share/Trash/*
+  228  df -h /
+  229  history
+  230  whoami
+  231  date
+  232  qemu-system-arm -kernel _install/boot/zImage -initrd rootfs.cpio.gz -machine virt -nographic -m 512 --append "root=/dev/ram0 rw console=ttyAMA0,115200 mem=512M"
+  233  cd ~/repos/busybox/_install
+  234  qemu-system-arm -kernel _install/boot/zImage -initrd rootfs.cpio.gz -machine virt -nographic -m 512 --append "root=/dev/ram0 rw console=ttyAMA0,115200 mem=512M"
+  235  cd ~/repos/busybox
+  236  qemu-system-arm -kernel _install/boot/zImage -initrd rootfs.cpio.gz -machine virt -nographic -m 512 --append "root=/dev/ram0 rw console=ttyAMA0,115200 mem=512M"
+  237  [200~cd ~/repos/busybox
+  238  ~cd ~/repos/busybox
+  239  cd ~/repos/busybox
+  240  emu-system-arm -kernel _install/boot/zImage -initrd rootfs.cpio.gz -machine virt -nographic -m 512 --append "root=/dev/ram0 rw console=ttyAMA0,115200 mem=512M"
+  241  qemu-system-arm -kernel _install/boot/zImage -initrd rootfs.cpio.gz -machine virt -nographic -m 512 --append "root=/dev/ram0 rw console=ttyAMA0,115200 mem=512M"
+  242  cd ~/repos/lab4_module
+  243  rm hello.c
+  244  nano hello.c
+  245  $KDIR/scripts/checkpatch.pl -f hello.c
+  246  export ARCH=arm
+  247  export PATH=/opt/gcc-arm-8.3-2019.03-x86_64-arm-eabi/bin:$PATH
+  248  export CROSS_COMPILE="ccache arm-eabi-"
+  249  export KDIR=$HOME/repos/linux-stable
+  250  $KDIR/scripts/checkpatch.pl -f hello.c
+  251  make
+  252  cp ~/repos/lab4_module/hello.ko ~/repos/busybox/_install/
+  253  cd ~/repos/busybox/_install
+  254  find . | cpio -o -H newc | gzip > ../rootfs.cpio.gz
+  255  cd ..
+  256  qemu-system-arm -kernel _install/boot/zImage -initrd rootfs.cpio.gz -machine virt -nographic -m 512 --append "root=/dev/ram0 rw console=ttyAMA0,115200 mem=512M"
+  257  history
+  258  whoami
+  259  date
+  260  history > ~/repos/lab4_module/history_lab4.txt 
